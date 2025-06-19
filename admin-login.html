@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Online Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html" class="website-name">VotexChain</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="user-login.html">User</a></li>
+                <li><a href="admin-login.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Admin Login Section -->
+    <main class="content">
+        <div class="login-section">
+            <h1>Admin Login</h1>
+            <form id="adminLoginForm" class="login-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Not an admin? <a href="user-login.html">Login as User</a></p>
+        </div>
+    </main>
+
+    <!-- Optional Background Overlay -->
+    <div class="background-overlay"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const adminLoginForm = document.getElementById("adminLoginForm");
+            const emailField = document.getElementById("email");
+            const passwordField = document.getElementById("password");
+
+            adminLoginForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                // Admin credentials
+                const adminEmail = "demo@gmail.com";
+                const adminPassword = "ruchi843314";
+
+                // Get the values from the input fields
+                const emailValue = emailField.value;
+                const passwordValue = passwordField.value;
+
+                // Check if the entered credentials match the admin credentials
+                if (emailValue === adminEmail && passwordValue === adminPassword) {
+                    // Redirect to Admin Dashboard if credentials match
+                    window.location.href = "admin-dashboard.html";
+                } else {
+                    // Show error message if credentials are incorrect
+                    alert("Invalid email or password. Please try again.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

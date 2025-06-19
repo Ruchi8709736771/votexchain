@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="voter-dashboard.html" class="website-name">VoterxChain</a>
+        </div>
+        <!-- Navbar -->
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('available-elections')">Available Elections</a></li>
+                <li><a href="#" onclick="showSection('registered-elections')">Registered Elections</a></li>
+                <li><a href="index.html" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="image-section">
+            <img src="1stimg.jpeg" alt="Election Image" class="election-image">
+        </div>
+        <section id="home" class="content-section">
+            <h2>Quick Links</h2>
+            <div class="quick-links">
+                <div class="link-card">
+                    <a href="#" onclick="showSection('available-elections')">Available Elections</a>
+                </div>
+                <div class="link-card">
+                    <a href="#" onclick="showSection('registered-elections')">Registered Elections</a>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="available-elections" class="content-section" style="display: none;">
+            <h2>Available Elections</h2>
+            <table id="electionTable">
+                <thead>
+                    <tr>
+                        <th>Election Name</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="electionList"></tbody>
+            </table>
+        </section>
+
+        <section id="registered-elections" class="content-section" style="display: none;">
+            <h2>Registered Elections</h2>
+            <table id="registeredElectionTable">
+                <thead>
+                    <tr>
+                        <th>Election Name</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="registeredElectionList"></tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- Pop-up Modals -->
+    <div id="votePopup" class="modal-popup" style="display: none;">
+        <h3>Vote for Candidate</h3>
+        <div id="candidateList"></div>
+        <button onclick="submitVote()">Submit Vote</button>
+        <button onclick="closeVotePopup()">Close</button>
+    </div>
+
+    <div id="resultPopup" class="modal-popup" style="display: none;">
+        <h3>Election Results</h3>
+        <canvas id="resultsChart"></canvas>
+        <button onclick="closeResultPopup()">Close</button>
+    </div>
+
+    <script type="module" src="voter.js" defer></script>
+</body>
+</html>

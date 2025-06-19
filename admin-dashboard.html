@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Online Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <header>
+        <div class="logo">
+            <a href="admin-dashboard.html" class="website-name">VotexChain</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="admin-dashboard.html">Admin Home</a></li>
+                <li><a href="add-election.html">Add Election</a></li>
+                <li><a href="add-candidate.html">Add Candidate</a></li>
+                <li><a href="view-results.html">View Results</a></li>
+                <li><a href="view-voters.html">View Voters</a></li>
+                <li><a href="view-candidates.html">View Candidates</a></li> <!-- New Link -->
+                <li><a href="index.html" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Admin Dashboard Section -->
+    <main class="dashboard">
+        <div class="image-section">
+            <img src="1stimg.jpeg" alt="Election Image" class="election-image">
+        </div>
+        <div class="dashboard-content">
+            <h1>Welcome to Admin Dashboard</h1>
+            <p>Manage Elections, Candidates, and View Results here.</p>
+            
+            <!-- Dashboard Quick Links -->
+            <div class="quick-links">
+                <div class="link-card">
+                    <a href="add-election.html">Add Election</a>
+                </div>
+                <div class="link-card">
+                    <a href="add-candidate.html">Add Candidate</a>
+                </div>
+                <div class="link-card">
+                    <a href="view-results.html">View Results</a>
+                </div>
+                <div class="link-card">
+                    <a href="view-voters.html">View Voters</a>
+                </div>
+                <div class="link-card">
+                    <a href="view-candidates.html">View Candidates</a> 
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Optional Background Overlay -->
+    <div class="background-overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

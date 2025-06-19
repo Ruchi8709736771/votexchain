@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration - VotexChain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Logo Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html" class="website-name">VotexChain</a>
+        </div>
+
+        <!-- Navbar -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="user-login.html">User</a></li>
+                <li><a href="admin-login.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Content Section -->
+    <main class="content">
+        <div class="registration-section">
+            <h1>User Registration</h1>
+            <form id="registration-form" class="registration-form">
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <label for="aadhar">Aadhaar Card:</label>
+                <input type="text" id="aadhar" name="aadhar" placeholder="Enter your Aadhaar number" required>
+
+                <label for="voterid">Voter ID:</label>
+                <input type="text" id="voterid" name="voterid" placeholder="Enter your Voter ID" required>
+
+                <!-- Role Selection -->
+                <label for="role">Register as:</label>
+                <select id="role" name="role" required>
+                    <option value="voter">Voter</option>
+                    <option value="candidate">Candidate</option>
+                </select>
+                <div id="party-container" style="display: none;">
+                    <label for="party">Party:</label>
+                    <input type="text" id="party" name="party" placeholder="Enter party name">
+                </div>
+
+                <button type="submit" class="cta-button">Register</button>
+            </form>
+            <p>Already have an account? <a href="user-login.html">Login here</a></p>
+        </div>
+    </main>
+
+    <!-- Optional Background Overlay -->
+    <div class="background-overlay"></div>
+
+    <!-- Script for any additional interactions -->
+    
+    <script type="module" src="registrtaion.js"></script>
+
+</body>
+</html>

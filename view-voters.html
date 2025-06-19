@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Voters</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="admin-dashboard.html" class="website-name">VotexChain</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="admin-dashboard.html">Admin Home</a></li>
+                <li><a href="add-election.html">Add Election</a></li>
+                <li><a href="add-candidate.html">Add Candidate</a></li>
+                <li><a href="view-results.html">View Results</a></li>
+                <li><a href="view-voters.html">View Voters</a></li>
+                <li><a href="view-candidates.html">View Candidates</a></li> <!-- New Link -->
+                <li><a href="index.html" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>View Voters</h2>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date of Birth</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Approval</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <!-- Users will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script type="module" src="viewvoter.js"></script>
+</body>
+</html>

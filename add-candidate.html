@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Candidate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="admin-dashboard.html" class="website-name">VotexChain</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="admin-dashboard.html">Admin Home</a></li>
+                <li><a href="add-election.html">Add Election</a></li>
+                <li><a href="add-candidate.html">Add Candidate</a></li>
+                <li><a href="view-results.html">View Results</a></li>
+                <li><a href="view-voters.html">View Voters</a></li>
+                <li><a href="view-candidates.html">View Candidates</a></li>
+                <li><a href="index.html" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+        
+        
+        <div class="admin-container">
+            <h2>Add Candidate</h2>
+
+            <!-- Election Dropdown -->
+            <label for="election-select">Select Election</label>
+            <select id="election-select" required>
+                <option value="">--Select Election--</option>
+                <!-- Dynamically populated with elections -->
+            </select>
+
+            <!-- Approve Registered Candidates Section -->
+            <section id="approve-registered-candidates">
+                <h3>Approve Registered Candidates</h3>
+                <div id="registered-candidates-list" class="scrollable-table">
+                    <table class="candidates-table">
+                        <thead>
+                            <tr>
+                                <th>Candidate Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Approval</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamically populated with registered candidates for approval -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script type="module" src="addcandidate.js"></script>
+</body>
+</html>

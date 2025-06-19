@@ -1,0 +1,831 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    overflow-y: auto;
+}
+
+/* Header styling */
+header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    top: 0;
+}
+
+/* Logo section */
+.logo {
+    margin-left: 20px;
+}
+
+.website-name {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2e4053;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.website-name:hover {
+    color: #4a90e2;
+}
+
+/* Navbar styling */
+nav {
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #2e4053;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4a90e2;
+    transform: scale(1.1);
+}
+
+/* Content section */
+.content {
+    text-align: center;
+    z-index: 1;
+}
+
+/* Typing effect */
+.typing-text {
+    display: inline-block;
+    font-weight: bold;
+    color: #4a90e2;
+    font-size: 3em;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #2e4053;
+    color: #e0eafc;
+    transform: scale(1.05);
+}
+
+/* Smooth gradient animation */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    background-size: 200% 200%;
+    animation: gradientAnimation 25s ease-in-out infinite;
+    z-index: -2;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Background overlay */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('') no-repeat center center/cover;
+    opacity: 0.1;
+    z-index: -1;
+}
+/* Center the login form in the page */
+.login-section {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.login-form button:hover {
+    background-color: #2e4053;
+    transform: scale(1.05);
+}
+
+/* Optional styling for the link */
+.login-section p {
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.login-section a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.login-section a:hover {
+    color: #2e4053;
+}
+/* Center the registration form in the page */
+/* Center the registration form in the page */
+.registration-section {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Reduce the width */
+    margin: 50px auto;
+    overflow-y: auto; /* Allow scrolling when the form overflows */
+    max-height: 80vh; /* Prevents form from getting too tall */
+    /* Adjust padding and margin to make it less bulky */
+}
+
+/* Form styling */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px; /* Padding at the bottom to avoid overlap with the button */
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.registration-form button {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.registration-form button:hover {
+    background-color: #2e4053;
+    transform: scale(1.05);
+}
+
+/* Optional styling for the link */
+.registration-section p {
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+.registration-section a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.registration-section a:hover {
+    color: #2e4053;
+}
+/* Dashboard Section */
+.dashboard {
+    padding: 40px;
+    background: linear-gradient(135deg, #00aaff, #0077cc);
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+}
+
+.dashboard h1 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.dashboard p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+}
+
+/* Quick Links Section */
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.link-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.link-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background-color: #00aaff; /* Subtle color change on hover */
+    color: white;
+}
+
+.link-card a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.link-card:hover a {
+    color: white; /* Change text color to white when hovered */
+}
+
+/* Logout Button */
+#logout-btn {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+#logout-btn:hover {
+    background-color: #c0392b;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+table thead {
+    background-color: #000; /* Set header background to black */
+    color: #df1818; /* Set header text color to white */
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #d3612b;
+}
+
+table tbody tr:hover {
+    background-color: #d3612b;
+}
+
+/* Scrollable table container */
+#userTable {
+    border: 1px solid #bb3333dc;
+}
+
+#userTableBody {
+    display: block;
+    max-height: 400px; /* Adjust height as needed */
+    overflow-y: auto;
+}
+
+#userTable thead, #userTable tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; /* Ensures proper alignment */
+}
+
+#userTable thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #1a73e8; /* Keep header sticky with a visible background */
+}
+/* Modal for approval status */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+/* Footer (optional) */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+#electionTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#electionTable th, #electionTable td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#electionTable th {
+    background-color: #333;
+    color: white;
+}
+
+#electionTable td button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#electionTable td button:hover {
+    background-color: #45a049;
+}
+/* Image Section Styling */
+.image-section {
+    text-align: center;
+    margin-bottom: 20px;  /* Adds space between the image and the quick links section */
+}
+
+.election-image {
+    width: 100%;
+    max-width: 600px;    /* Ensures the image doesn't become too large */
+    height: auto;        /* Maintains aspect ratio */
+    border-radius: 8px;  /* Optional: Adds rounded corners to the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Optional: Adds a subtle shadow to the image */
+    transition: transform 0.3s ease-in-out; /* Optional: Adds a smooth zoom effect on hover */
+}
+
+.election-image:hover {
+    transform: scale(1.05);  /* Optional: Zooms in the image slightly on hover */
+}
+
+/* Responsive Image */
+@media screen and (max-width: 768px) {
+    .election-image {
+        max-width: 100%;  /* Makes the image full width on smaller screens */
+    }
+}
+/* Admin Container */
+/* Admin Container */
+.admin-container {
+    width: 50%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.admin-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+select, input[type="text"], input[type="file"], button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Styling for Select Inputs */
+select {
+    border-color: #bbb;
+}
+
+/* Section Headers */
+h3 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Registered Candidates List */
+#registered-candidates-list {
+    margin-top: 10px;
+    max-height: 400px; /* Set a max height for the container */
+    overflow-y: auto;  /* Make the table scrollable */
+}
+
+table {
+    width: 100%; /* Make sure the table takes the full width */
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px; /* Add padding for readability */
+    text-align: left;
+    border: 1px solid #ddd; /* Add border for a clean, structured look */
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Styling for Action Buttons (Approve/Reject) */
+button.approve-btn, button.reject-btn {
+    padding: 5px 15px; /* Smaller padding for a compact button */
+    font-size: 14px;    /* Smaller text size */
+    margin: 0 5px;      /* Space between the buttons */
+    border-radius: 4px; /* Rounded corners */
+    border: none;       /* Remove default button border */
+}
+
+button.approve-btn {
+    background-color: #4CAF50; /* Green for approve */
+    color: white;
+}
+
+button.approve-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+button.reject-btn {
+    background-color: #f44336; /* Red for reject */
+    color: white;
+}
+
+button.reject-btn:hover {
+    background-color: #e53935; /* Darker red on hover */
+}
+
+button.approve-btn, button.reject-btn {
+    display: inline-block; /* Display buttons side by side */
+}
+
+/* Hover effect for candidate action buttons */
+button.approve-btn:hover, button.reject-btn:hover {
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+
+/* Heading Style */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 18px;
+    color: #333;
+}
+
+form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+form input:focus {
+    border-color: #005f73;
+}
+
+form button {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #005f73;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #003e49;
+}
+
+/* Logout Button */
+#logout-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#logout-btn:hover {
+    color: #ffd700;
+}
+
+/* Style for the Modal */
+#voteModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 60%;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Modal (Popup) Styling */
+.modal-popup {
+    display: none;
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    overflow-y: auto;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal Content */
+.modal-popup h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.modal-popup button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.modal-popup button:hover {
+    background-color: #45a049;
+}
+
+.modal-popup .close-btn {
+    background-color: #e53e3e;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-popup .close-btn:hover {
+    background-color: #c53030;
+}
+
+/* Result Popup Specific */
+#resultPopup canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Modal backdrop (when popup is open) */
+body.modal-open {
+    overflow: hidden;
+}
+
+body.modal-open::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9998;
+}
+

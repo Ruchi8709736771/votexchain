@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - VotexChain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Logo Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html" class="website-name">VotexChain</a>
+        </div>
+
+        <!-- Navbar -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="user-login.html">User</a></li>
+                <li><a href="admin-login.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Content Section -->
+    <main class="content">
+        <div class="login-section">
+            <h1>User Login</h1>
+            <form action="#" method="POST" class="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit" class="cta-button">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Click here to register</a></p>
+        </div>
+    </main>
+
+    <!-- Optional Background Overlay -->
+    <div class="background-overlay"></div>
+
+    <!-- Script for any additional interactions -->
+    <script type="module" src="login.js"></script>
+</body>
+</html>
